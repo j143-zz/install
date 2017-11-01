@@ -1,7 +1,9 @@
 #!/bin/bash
 # commands for running systemml
 
+cd systemml
+
 mvn clean package
 
 # for running a specific script
-spark-submit systemml/target/SystemML.jar -f systemml/scripts/nn/test/run_tests.dml
+spark-submit target/SystemML.jar -f scripts/nn/test/run_tests.dml
