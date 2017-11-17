@@ -1,4 +1,4 @@
-
+#!/bin/bash
 # Install ruby on rails server
 
 ## 1. Install rbenv
