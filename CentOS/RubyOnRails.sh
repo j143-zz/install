@@ -75,6 +75,49 @@ sudo yum install nodejs
 
 # Ruby on Rails is now installed on the system!
 
+# -----------------------------------------------------------------------------------------------------------------------
 
+# Improvements
 
+## 1. Install a Database
+
+# Rails uses sqlite3 as its default database, which may not meet the requirements of your application. 
+# You may want to install an RDBMS, such as MySQL or PostgreSQL, for this purpose.
+
+# For example, if you want to use MariaDB as your database, install it with yum:
+sudo yum install mariadb-server mariadb-devel
+
+# Then install the mysql2 gem, like this:
+gem install mysql2
+
+# Now you can use MariaDB with your Rails application. Be sure to configure MariaDB 
+# and your Rails application properly.
+
+## 2. Create a test application
+
+# If you want to make sure that your Ruby on Rails installation went smoothly, you can 
+# quickly create a test application to test it out. For simplicity, our test application will use sqlite3 for its database.
+
+# Create a new Rails application in your home directory:
+cd ~
+rails new testapp
+
+# Then move into the application's directory:
+cd testapp
+
+# Create the sqlite3 database:
+rake db:create
+
+# If you don't already know the public IP address of your server, look it up with this command:
+ip addr show eth0 | grep inet | awk '{ print $2; }' | sed 's/\/.*$//'
+
+# Copy the IPv4 address to your clipboard, then use it with this command to start your Rails 
+# application (substitute the highlighted part with the IP address):
+rails server --binding=server_public_IP
+
+# If it is working properly, your Rails application should be running on port 3000 of the public
+# IP address of your server. Visit your Rails application by going there in a web browser:
+http://server_public_IP:3000
+
+# you see the Rails "Welcome aboard" page!
 
