@@ -10,7 +10,7 @@ sudo ln -s /usr/lib/scala-2.12.4 /usr/lib/scala
 export PATH=$PATH:/usr/lib/scala/bin
 scala -version
 
-wget wget https://www.apache.org/dyn/closer.lua/spark/spark-2.2.0/spark-2.2.0-bin-hadoop2.7.tgz
+wget http://www-us.apache.org/dist/spark/spark-2.2.0/spark-2.2.0-bin-hadoop2.7.tgz
 tar xvf spark-2.2.0-bin-hadoop2.7.tgz
 
 export SPARK_HOME=$HOME/spark-2.2.0-bin-hadoop2.7
