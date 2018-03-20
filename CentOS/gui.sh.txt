@@ -1,0 +1,11 @@
+# list the group
+yum group list
+
+# install GUI tools
+yum groupinstall "GNOME Desktop" "Graphical Administration Tools"
+
+# 2. Enable GUI on system startup
+ln -sf /lib/systemd/system/runlevel5.target /etc/systemd/system/default.target
+
+# 3. Reboot the machine to start the server in the graphical mode.
+reboot 

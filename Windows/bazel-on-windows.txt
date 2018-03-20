@@ -1,0 +1,28 @@
+https://docs.bazel.build/versions/master/windows.html#usin
+
+Requirements
+Python 2.7 or later.
+msys2 shell.
+
+You also need to set the BAZEL_SH environment variable to point to bash.exe. For example in the Windows Command Prompt (cmd.exe):
+
+set BAZEL_SH=C:\msys64\usr\bin\bash.exe
+Several msys2 packages.
+
+Run the following command in the msys2 shell to install them:
+
+pacman -Syuu git curl zip unzip
+Java JDK 8.
+
+JDK 7 and 9 are not supported.
+
+If you downloaded a binary distribution of Bazel (see installing Bazel on Windows), the binary has JDK 8 embedded by default.
+
+If you built Bazel from source: set the JAVA_HOME environment variable to the JDK's directory.
+
+For example in the Windows Command Prompt (cmd.exe):
+
+set JAVA_HOME=C:\Program Files\Java\jdk1.8.0_112
+This step is not required if you downloaded a binary distribution of Bazel or installed Bazel using Chocolatey. See installing Bazel on Windows.
+
+Environment variables you set in the Windows Command Prompt (cmd.exe) are only set in that command prompt session. If you start a new cmd.exe, you need to set the variables again. To always set the variables when cmd.exe starts, you can add them to the User variables or System variables in the Control Panel > System Properties > Advanced > Environment Variables... dialog box.

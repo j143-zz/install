@@ -1,0 +1,24 @@
+
+# 1. download the cmake file for linux/unix source(has \n line feeds)
+wget https://cmake.org/files/v3.11/cmake-3.11.0-rc2.tar.gz
+
+# 2. extract the directory
+tar -zxvf cmake-3.11.0-rc2.tar.gz
+
+# 3. checkout the directory root
+cd cmake-3.11.0-rc2
+
+# 4. 
+sudo ./bootstrap --prefix=/usr/local
+
+# 5. 
+sudo gmake
+
+# 6. 
+sudo gmake install
+
+# 7. set the path
+# may not be needed
+
+# 8. verify installation
+cmake --version
